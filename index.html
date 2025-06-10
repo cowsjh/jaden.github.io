@@ -1,62 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>JADEN Tattoo</title>
     <style>
-      body {
-        font-family: sans-serif;
-        background: white;
-        color: #111;
+      * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
-      .section {
-        padding: 40px;
-        text-align: center;
+
+      body {
+        font-family: sans-serif;
+        color: white;
+        height: 100vh;
+        background: url('tree.jpg') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
       }
-      .gallery div {
-        width: 100px;
-        height: 100px;
-        display: inline-block;
-        margin: 10px;
+
+      h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
       }
-      .red { background: red; }
-      .blue { background: blue; }
+
+      p {
+        font-size: 20px;
+      }
 
       .button {
         display: inline-block;
-        margin-top: 20px;
-        padding: 10px 20px;
-        background-color: #000;
-        color: #fff;
+        margin-top: 30px;
+        padding: 12px 24px;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
         text-decoration: none;
         border-radius: 6px;
         transition: background 0.3s;
       }
 
       .button:hover {
-        background-color: #333;
+        background-color: rgba(255, 255, 255, 0.2);
       }
     </style>
   </head>
   <body>
-    <div class="section">
-      <h1>JADEN TATTOO</h1>
-      <p>Dark, Mythic, Surreal</p>
-      <a href="https://www.instagram.com/cowfisjh/" target="_blank" class="button">Instagram</a>
-    </div>
-
-    <div class="section gallery">
-      <h2>Gallery</h2>
-      <div class="red"></div>
-      <div class="blue"></div>
-    </div>
-
-    <div class="section">
-      <h2>Booking</h2>
-      <p>Ready to get tattooed? Use the button below to request a booking:</p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScXURfA8PuEPBOHS5dxkbI1KxDxW29lYnV0TmagFn0THvNOig/viewform?usp=dialog" target="_blank" class="button">Book Now</a>
-    </div>
+    <h1>JADEN TATTOO</h1>
+    <p>Dark, Mythic, Surreal</p>
+    <a href="https://www.instagram.com/cowfisjh/" target="_blank" class="button">Instagram</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScXURfA8PuEPBOHS5dxkbI1KxDxW29lYnV0TmagFn0THvNOig/viewform?usp=dialog" target="_blank" class="button">Book Now</a>
   </body>
 </html>
