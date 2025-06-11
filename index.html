@@ -8,6 +8,16 @@
         font-family: 'TitleFont';
         src: url('titleFont.ttf') format('truetype');
       }
+      #sequence {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+        pointer-events: none;
+      }
 
       * {
         margin: 0;
@@ -17,7 +27,9 @@
 
       body {
         font-family: sans-serif;
-        background: url('bg.png') no-repeat center center fixed;
+/*         background: url('bg.png') no-repeat center center fixed; */
+        <img id="sequence" src="backgroundSequence/frame1.png" alt="sequence" />
+
         background-size: cover;
         color: white;
         height: 100vh;
@@ -26,6 +38,21 @@
         justify-content: center;
         align-items: center;
         text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+        <script>
+          const totalFrames = 48;
+          const fps = 24;
+          const sequence = document.getElementById('sequence');
+          let currentFrame = 1;
+        
+          function playSequence() {
+            currentFrame = (currentFrame % totalFrames) + 1;
+            sequence.src = `backgroundSequence/frame${currentFrame}.png`;
+          }
+        
+          setInterval(playSequence, 1000 / fps);
+        </script>
+
+        
       }
 
       h1 {
